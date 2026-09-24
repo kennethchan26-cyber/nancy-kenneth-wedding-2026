@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f6f1">
+  <meta name="description" content="Nancy 與 Kenneth 的婚禮時間及地點資訊。2026 年 11 月 28 日。">
+  <title>Nancy 與 Kenneth｜婚禮資訊</title>
+  <link rel="preload" href="allison-regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2324344c'/%3E%3Cpath d='M32 11v42M21 25h22' stroke='%23d8b874' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+  <style>
+    @font-face { font-family: "Wedding Script"; src: url("allison-regular.ttf") format("truetype"); font-style: normal; font-weight: 400; font-display: swap; }
+    :root { color-scheme: light; font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif; color: #24344c; background: #f8f7f3; }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-width: 300px; }
+    .frame { min-height: 100vh; padding: 0 18px 52px; background: radial-gradient(circle at 92% 4%, #e9edf0 0, transparent 28%), #f8f7f3; }
+    main { max-width: 920px; margin: 0 auto; }
+    .hero { display: grid; overflow: hidden; background: #24344c; color: #fff; box-shadow: 0 18px 48px #1c2c4030; }
+    .hero-photo { display: block; width: 100%; height: 270px; object-fit: cover; object-position: center 61%; }
+    header { position: relative; text-align: center; padding: 44px 18px 42px; border-top: 8px solid transparent; border-image: linear-gradient(105deg, #099ccb, #23c4b7 30%, #e2b539 51%, #bd417b 74%, #4679c6) 1; }
+    header::before, header::after { content: ""; display: block; width: 74px; height: 1px; margin: 0 auto 23px; background: #d1b477; }
+    header::after { margin: 24px auto 0; }
+    .eyebrow { margin: 0 0 17px; color: #e2cd9e; font-size: .84rem; letter-spacing: .24em; }
+    h1 { margin: 0; font-family: "Wedding Script", "Segoe Script", cursive; font-size: clamp(4.3rem, 17vw, 6rem); font-weight: 400; line-height: .95; letter-spacing: 0; }
+    h1 .name { display: block; }
+    .amp { display: block; color: #d8b874; font-size: .55em; line-height: .85; margin: .15em 0; }
+    .date { margin: 21px 0 0; font-size: 1rem; letter-spacing: .1em; }
+    .date span { color: #d8b874; padding: 0 .5em; }
+    h2 { margin: 0; font-size: 1.4rem; font-weight: 600; letter-spacing: .05em; }
+    .section-label { margin: 40px 0 21px; text-align: center; color: #856b42; font-size: .88rem; letter-spacing: .21em; }
+    .section-label::before, .section-label::after { content: ""; display: inline-block; vertical-align: middle; width: 23px; height: 1px; background: #cbb58d; margin: 0 13px; }
+    .events { position: relative; }
+    .events::before { content: ""; position: absolute; left: 20px; top: 23px; bottom: 23px; width: 1px; background: #cfb88b; }
+    .card { position: relative; background: #fff; border: 1px solid #e5e0d5; box-shadow: 0 10px 28px #293d520c; padding: 27px 25px 29px; margin: 16px 0 16px 39px; }
+    .card::before { content: ""; position: absolute; left: -24px; top: 29px; width: 9px; height: 9px; border: 2px solid #a78348; border-radius: 50%; background: #f8f7f3; }
+    .card-head { display: flex; gap: 16px; align-items: start; }
+    .number { flex: none; color: #a58146; font: italic 1.55rem Georgia, serif; line-height: 1.1; }
+    .place { margin: 7px 0 0; color: #526076; line-height: 1.65; }
+    .times { margin: 22px 0; border-top: 1px solid #e9e4da; border-bottom: 1px solid #e9e4da; }
+    .time-row { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding: 13px 0; }
+    .time-row + .time-row { border-top: 1px solid #efebe3; }
+    .time-row strong { font-size: 1.22rem; font-weight: 600; font-variant-numeric: tabular-nums; white-space: nowrap; }
+    address { font-style: normal; color: #4d5c70; line-height: 1.7; }
+    .map-link { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; margin-top: 20px; padding: 0 21px; background: #24344c; color: #fff; text-decoration: none; font-weight: 600; }
+    .map-link:focus-visible, .map-link:hover { outline: 2px solid #b69862; outline-offset: 3px; background: #334862; }
+    .parking-note { margin: 13px 0 0; color: #806139; font-weight: 600; }
+    .guide { margin: 39px 0 0; padding: 27px 22px 28px; background: #f0eee9; border-top: 1px solid #d4bd90; }
+    .guide h2 { font-size: 1.28rem; text-align: center; margin: 0 0 22px; }
+    .guide-grid { display: grid; gap: 18px; }
+    .guide-place { background: #fff; padding: 21px 22px 24px; border: 1px solid #e5e0d5; }
+    .guide-place h3 { margin: 0 0 12px; font-size: 1.12rem; }
+    .guide-place dl { margin: 0; }
+    .guide-place dt { margin: 15px 0 4px; color: #92734b; font-size: .89rem; font-weight: 700; letter-spacing: .08em; }
+    .guide-place dd { margin: 0; line-height: 1.72; color: #48566a; }
+    .guide-place a { color: #24344c; text-underline-offset: 3px; }
+    .photos { margin-top: 36px; }
+    .photos h2 { text-align: center; margin: 0 0 19px; font-family: "Wedding Script", "Segoe Script", cursive; font-weight: 400; color: #856b42; font-size: clamp(2.5rem, 10vw, 3.7rem); line-height: 1.2; letter-spacing: 0; }
+    .photo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .photo-grid figure { position: relative; margin: 0; aspect-ratio: 3 / 4; overflow: hidden; background: #e8e3da; }
+    .photo-grid img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 42%; }
+    .photo-grid figure:nth-child(2) img { object-position: center 32%; }
+    .glass-ribbon { height: 68px; margin-top: 30px; background: url("church-glass.jpeg") center 44% / cover; border-top: 3px solid #24344c; border-bottom: 3px solid #24344c; }
+    .booklet { position: relative; display: grid; gap: 22px; margin-top: 36px; padding: 28px; background: #24344c; color: #fff; border-left: 5px solid #18b9bd; }
+    .booklet::before { content: ""; position: absolute; top: 0; left: -5px; width: 5px; height: 100%; background: linear-gradient(#18b9bd 0 34%, #e2b539 34% 66%, #bd417b 66%); }
+    .booklet h2 { margin-top: 9px; }
+    .draft-label { display: inline-block; padding: 4px 10px; border: 1px solid #d8b874; color: #edd7a5; font-size: .875rem; }
+    .booklet p { margin: 12px 0 0; color: #e2e7ef; line-height: 1.7; }
+    .booklet .map-link { margin-top: 18px; background: #f7f2e7; color: #24344c; }
+    .booklet .file-detail { font-size: .875rem; color: #c8d0dd; }
+    footer { text-align: center; margin-top: 36px; color: #856b42; font: 2.5rem/1.3 "Wedding Script", "Segoe Script", cursive; }
+    @media (min-width: 720px) {
+      .frame { padding: 48px 30px 78px; }
+      .hero { grid-template-columns: 46% 54%; min-height: 380px; }
+      .hero-photo { height: 100%; min-height: 450px; object-position: center 36%; }
+      header { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 40px 20px; }
+      .section-label { margin-top: 49px; }
+      .events { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+      .events::before, .card::before { display: none; }
+      .card { margin: 0; padding: 32px 34px; }
+      .guide { padding: 33px 34px 35px; }
+      .guide-grid { grid-template-columns: 1fr 1fr; }
+      .photos { margin-top: 48px; }
+      .glass-ribbon { height: 92px; }
+      .booklet { padding: 32px 36px; }
+      .photo-grid { gap: 20px; }
+      .photo-grid figure { aspect-ratio: 4 / 3; }
+      .photo-grid figure:first-child img { object-position: center 36%; }
+      .photo-grid figure:nth-child(2) img { object-position: center 29%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <main>
+      <div class="hero">
+        <img class="hero-photo" src="hero-couple.jpeg" width="2048" height="1366" alt="Nancy 與 Kenneth 的婚紗照">
+        <header>
+          <p class="eyebrow">婚禮當日資訊</p>
+          <h1 aria-label="Nancy &amp; Kenneth"><span class="name">Nancy</span><span class="amp" aria-hidden="true">&amp;</span><span class="name">Kenneth</span></h1>
+          <p class="date">2026 年 11 月 28 日 <span aria-hidden="true">·</span> 星期六</p>
+        </header>
+      </div>
+
+      <div class="glass-ribbon" aria-hidden="true"></div>
+      <p class="section-label">當日時間及地點</p>
+
+      <div class="events">
+      <section class="card" aria-labelledby="church-title">
+        <div class="card-head"><span class="number" aria-hidden="true">01</span><div><h2 id="church-title">婚禮彌撒</h2><p class="place">聖本篤堂 · 沙田圍</p></div></div>
+        <div class="times">
+          <div class="time-row"><span>恭候光臨</span><strong>下午 1:30</strong></div>
+          <div class="time-row"><span>婚禮彌撒</span><strong>下午 2:00</strong></div>
+        </div>
+        <address>香港新界沙田沙田圍崗背街 7 號</address>
+        <p class="parking-note">教堂車位只限已登記車輛</p>
+        <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=St%20Benedict%20Church%207%20Kong%20Pui%20Street%20Sha%20Tin" target="_blank" rel="noopener noreferrer" aria-label="在地圖查看聖本篤堂，於新分頁開啟">查看教堂地圖 ↗</a>
+      </section>
+
+      <section class="card" aria-labelledby="banquet-title">
+        <div class="card-head"><span class="number" aria-hidden="true">02</span><div><h2 id="banquet-title">婚宴</h2><p class="place">沙田麗豪酒店 · 3 樓紫荊廳</p></div></div>
+        <div class="times">
+          <div class="time-row"><span>恭候光臨</span><strong>下午 6:00</strong></div>
+          <div class="time-row"><span>自助晚宴</span><strong>晚上 8:00</strong></div>
+        </div>
+        <address>香港新界沙田大涌橋路 34–36 號</address>
+        <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Regal%20Riverside%20Hotel%2034-36%20Tai%20Chung%20Kiu%20Road%20Sha%20Tin" target="_blank" rel="noopener noreferrer" aria-label="在地圖查看沙田麗豪酒店，於新分頁開啟">查看酒店地圖 ↗</a>
+      </section>
+      </div>
+
+      <section class="guide" aria-labelledby="guide-title">
+        <h2 id="guide-title">交通、泊車及到場指引</h2>
+        <div class="guide-grid">
+          <div class="guide-place">
+            <h3>聖本篤堂</h3>
+            <dl>
+              <dt>港鐵</dt>
+              <dd>乘屯馬綫至沙田圍站，由 C 出口步行往崗背街 7 號。</dd>
+              <dt>到場</dt>
+              <dd>下午 1:30 起恭候光臨；抵達聖堂後請按現場指示入座。</dd>
+              <dt>泊車</dt>
+              <dd>教堂車位只限已登記車輛。未登記車輛請自行安排附近泊車，建議乘搭公共交通工具。</dd>
+            </dl>
+          </div>
+          <div class="guide-place">
+            <h3>沙田麗豪酒店</h3>
+            <dl>
+              <dt>港鐵</dt>
+              <dd>由沙田圍站 C 出口步行至酒店約 5 分鐘。</dd>
+              <dt>到場</dt>
+              <dd>抵達酒店後按指示前往 3 樓紫荊廳；下午 6:00 起恭候光臨。</dd>
+              <dt>泊車</dt>
+              <dd>酒店地庫一樓設停車場。車位及收費請向酒店查詢：<a href="tel:+85226497878">2649 7878</a>。</dd>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <section class="booklet" aria-labelledby="booklet-title">
+        <div>
+          <span class="draft-label">草稿，內容待定</span>
+          <h2 id="booklet-title">婚禮彌撒小冊子</h2>
+          <p>彌撒經文、聖歌及禮儀流程，方便親友一同參與。</p>
+          <a class="map-link" href="wedding-mass-booklet-draft-v2.6.pdf" target="_blank" rel="noopener noreferrer" aria-label="閱讀彌撒小冊子草稿 PDF，於新分頁開啟">閱讀小冊子 PDF ↗</a>
+          <p class="file-detail">草稿 v2.6 · 29 頁 · 3.4 MB<br>部分內容及人員名單仍待確認。</p>
+        </div>
+      </section>
+
+      <section class="photos" aria-labelledby="photos-title">
+        <h2 id="photos-title">Nancy &amp; Kenneth</h2>
+        <div class="photo-grid">
+          <figure><img src="couple-bridge.jpeg" width="1672" height="2508" loading="lazy" alt="Nancy 與 Kenneth 在湖畔木橋上的婚紗照"></figure>
+          <figure><img src="couple-woods.jpeg" width="1024" height="1536" loading="lazy" alt="Nancy 與 Kenneth 在林間的婚紗照"></figure>
+        </div>
+      </section>
+
+      <footer>Nancy &amp; Kenneth</footer>
+    </main>
+  </div>
+</body>
+</html>
