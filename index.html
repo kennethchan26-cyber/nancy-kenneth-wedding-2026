@@ -60,6 +60,12 @@
     .photo-grid img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 42%; }
     .photo-grid figure:nth-child(2) img { object-position: center 32%; }
     .glass-ribbon { height: 68px; margin-top: 30px; background: url("church-glass.jpeg") center 44% / cover; border-top: 3px solid #24344c; border-bottom: 3px solid #24344c; }
+    .glass-finale { position: relative; display: grid; grid-template-columns: 1.1fr .8fr 1.1fr; height: 112px; margin-top: 30px; overflow: hidden; border: 4px solid #24344c; background: #24344c; gap: 4px; }
+    .glass-finale span { background-image: url("church-glass.jpeg"); background-size: 190% auto; filter: saturate(.92) contrast(1.04); }
+    .glass-finale span:nth-child(1) { background-position: 8% 44%; }
+    .glass-finale span:nth-child(2) { background-position: 50% 47%; }
+    .glass-finale span:nth-child(3) { background-position: 92% 44%; }
+    .glass-finale::after { content: "✝"; position: absolute; inset: 0; display: grid; place-items: center; color: #fff; font: 38px/1 Georgia, serif; text-shadow: 0 2px 10px #172235; }
     .booklet { position: relative; display: grid; gap: 22px; margin-top: 36px; padding: 28px; background: #24344c; color: #fff; border-left: 5px solid #18b9bd; }
     .booklet::before { content: ""; position: absolute; top: 0; left: -5px; width: 5px; height: 100%; background: linear-gradient(#18b9bd 0 34%, #e2b539 34% 66%, #bd417b 66%); }
     .booklet h2 { margin-top: 9px; }
@@ -67,7 +73,7 @@
     .booklet p { margin: 12px 0 0; color: #e2e7ef; line-height: 1.7; }
     .booklet .map-link { margin-top: 18px; background: #f7f2e7; color: #24344c; }
     .booklet .file-detail { font-size: .875rem; color: #c8d0dd; }
-    footer { text-align: center; margin-top: 36px; color: #856b42; font: 2.5rem/1.3 "Wedding Script", "Segoe Script", cursive; }
+    footer { text-align: center; margin-top: 25px; color: #856b42; font-size: .84rem; letter-spacing: .2em; }
     @media (min-width: 720px) {
       .frame { padding: 48px 30px 78px; }
       .hero { grid-template-columns: 46% 54%; min-height: 380px; }
@@ -81,6 +87,7 @@
       .guide-grid { grid-template-columns: 1fr 1fr; }
       .photos { margin-top: 48px; }
       .glass-ribbon { height: 92px; }
+      .glass-finale { height: 148px; }
       .booklet { padding: 32px 36px; }
       .photo-grid { gap: 20px; }
       .photo-grid figure { aspect-ratio: 4 / 3; }
@@ -106,14 +113,14 @@
 
       <div class="events">
       <section class="card" aria-labelledby="church-title">
-        <div class="card-head"><span class="number" aria-hidden="true">01</span><div><h2 id="church-title">婚禮彌撒</h2><p class="place">聖本篤堂 · 沙田圍</p></div></div>
+        <div class="card-head"><span class="number" aria-hidden="true">01</span><div><h2 id="church-title">婚禮彌撒</h2><p class="place">天主教香港教區 聖本篤堂 · 沙田圍</p></div></div>
         <div class="times">
           <div class="time-row"><span>恭候光臨</span><strong>下午 1:30</strong></div>
           <div class="time-row"><span>婚禮彌撒</span><strong>下午 2:00</strong></div>
         </div>
         <address>香港新界沙田沙田圍崗背街 7 號</address>
         <p class="parking-note">教堂車位只限已登記車輛</p>
-        <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=St%20Benedict%20Church%207%20Kong%20Pui%20Street%20Sha%20Tin" target="_blank" rel="noopener noreferrer" aria-label="在地圖查看聖本篤堂，於新分頁開啟">查看教堂地圖 ↗</a>
+        <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Church%20of%20St%20Benedict%207%20Kong%20Pui%20Street%20Sha%20Tin" target="_blank" rel="noopener noreferrer" aria-label="在地圖查看聖本篤堂，於新分頁開啟">查看聖堂地圖 ↗</a>
       </section>
 
       <section class="card" aria-labelledby="banquet-title">
@@ -131,7 +138,7 @@
         <h2 id="guide-title">交通、泊車及到場指引</h2>
         <div class="guide-grid">
           <div class="guide-place">
-            <h3>聖本篤堂</h3>
+            <h3>天主教香港教區 聖本篤堂</h3>
             <dl>
               <dt>港鐵</dt>
               <dd>乘屯馬綫至沙田圍站，由 C 出口步行往崗背街 7 號。</dd>
@@ -173,7 +180,8 @@
         </div>
       </section>
 
-      <footer>Nancy &amp; Kenneth</footer>
+      <div class="glass-finale" aria-label="聖本篤堂彩繪玻璃裝飾" role="img"><span></span><span></span><span></span></div>
+      <footer>誠邀蒞臨 · 分享喜悅</footer>
     </main>
   </div>
 </body>
