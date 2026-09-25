@@ -1,0 +1,23 @@
+.church-photo { margin: 10px 0 0; background: #e9e4dc; }
+.church-photo img { display: block; width: 100%; height: auto; }
+.church-photo figcaption { padding: 12px 18px; background: #f0efec; color: #536177; font-size: .9rem; line-height: 1.6; }
+.church-photo a, .church-source a { color: #24344c; text-underline-offset: 4px; }
+.church-article { max-width: 740px; margin: 0 auto; padding: 20px 8px 46px; font-size: 1.08rem; line-height: 1.9; }
+.church-article h2 { margin: 35px 0 20px; font: 400 clamp(1.5rem, 5vw, 2rem)/1.35 Georgia, "Noto Serif TC", serif; }
+.church-lead { font-size: 1.15rem; }
+.church-details { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.church-details section { padding: 21px 20px 22px; border: 1px solid #dfd2b8; border-top: 3px solid #ac966f; background: #fffefa; }
+.church-details section:nth-child(3n+2) { border-top-color: #648aa8; }
+.church-details section:nth-child(3n) { border-top-color: #b88873; }
+.detail-number { color: #8c7557; font: 400 1.45rem/1 Georgia, serif; }
+.church-details h3 { margin: 10px 0 9px; font: 600 1.18rem/1.5 "Noto Sans TC", "PingFang TC", sans-serif; }
+.church-details p { margin: 0; font-size: 1rem; line-height: 1.8; }
+.church-timeline { list-style: none; margin: 0 0 26px; padding: 0; border-left: 1px solid #bca477; }
+.church-timeline li { display: grid; grid-template-columns: 74px 1fr; gap: 12px; padding: 14px 0 14px 19px; border-bottom: 1px solid #e5dccd; }
+.church-timeline strong { color: #98794e; font-family: Georgia, serif; font-size: 1.2rem; }
+.church-source { margin-top: 34px; padding: 20px 22px; border: 1px solid #c9b999; background: #fffefa; }
+.church-source p { margin: 0 0 12px; color: #536177; font-size: .95rem; line-height: 1.7; }
+.church-source a { font-weight: 600; }
+.church-source a + a { display: inline-block; margin: 8px 0 0 24px; }
+@media (max-width: 600px) { .church-details { grid-template-columns: 1fr; } }
+@media (max-width: 380px) { .church-timeline li { grid-template-columns: 1fr; gap: 0; } }

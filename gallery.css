@@ -1,0 +1,50 @@
+@font-face { font-family: "Wedding Script"; src: url("allison-regular.ttf") format("truetype"); font-style: normal; font-weight: 400; font-display: swap; }
+:root { color-scheme: light; font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif; color: #24344c; background: #f8f7f3; }
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 300px; }
+.frame { min-height: 100vh; padding: 0 18px 52px; background: radial-gradient(circle at 92% 4%, #e9edf0 0, transparent 28%), #f8f7f3; }
+main { max-width: 920px; margin: 0 auto; }
+.topbar { display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: center; gap: 7px 12px; padding: 12px 0; }
+.site-links { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px; width: 100%; order: 2; }
+.site-links a { display: flex; min-height: 52px; align-items: center; justify-content: center; padding: 6px; border: 1px solid #ac966f; color: #24344c; font-family: inherit; font-size: 1rem; font-weight: 600; line-height: 1.35; text-align: center; text-decoration: none; }
+.site-links a[aria-current="page"] { background: #24344c; color: #fff; border-color: #24344c; }
+.language-nav { display: flex; justify-content: flex-end; align-items: center; gap: 4px; font-size: .95rem; }
+.language-nav a { display: inline-flex; min-height: 44px; min-width: 72px; align-items: center; justify-content: center; padding: 0 14px; border: 1px solid #ac966f; color: #24344c; text-decoration: none; font-weight: 600; }
+.language-nav a[aria-current="page"] { background: #24344c; color: #fff; border-color: #24344c; }
+.topbar a:hover, .topbar a:focus-visible, .home-link:focus-visible, .home-link:hover, .photo-tile:focus-visible, .viewer button:focus-visible { outline: 2px solid #ac966f; outline-offset: 2px; }
+.album-header { padding: 33px 18px 35px; border-top: 7px solid transparent; border-image: linear-gradient(105deg, #099ccb, #23c4b7 30%, #e2b539 51%, #bd417b 74%, #4679c6) 1; background: #24344c; color: #fff; text-align: center; }
+.album-header .names { margin: 0; color: #d8b874; font: 400 clamp(2.9rem, 12vw, 4.5rem)/1 "Wedding Script", "Segoe Script", cursive; }
+.album-header h1 { margin: 13px 0 0; font: 400 clamp(1.9rem, 8vw, 2.7rem)/1.2 Georgia, "Noto Serif TC", serif; }
+.album-header p { margin: 10px 0 0; color: #e6e2da; font-size: 1rem; }
+.home-link { display: inline-flex; align-items: center; min-height: 44px; margin: 20px 0 14px; color: #24344c; font-weight: 600; text-underline-offset: 4px; }
+.story-photo { margin: 10px 0 0; background: #e9e4dc; }
+.story-photo img { display: block; width: 100%; max-height: 540px; object-fit: cover; object-position: center 48%; }
+.story-cat { margin: 12px 0 0; background: #e9e4dc; }
+.story-cat img { display: block; width: 100%; height: auto; }
+.story-cat figcaption { padding: 12px 16px; color: #536177; background: #f0efec; font-size: .92rem; line-height: 1.6; text-align: center; }
+.story-narrative { max-width: 710px; margin: 0 auto; padding: 12px 8px 36px; }
+.story-chapter { padding: 28px 0 26px; border-bottom: 1px solid #d9c8a7; }
+.story-chapter h2 { margin: 0 0 16px; color: #24344c; font: 400 clamp(1.35rem, 4vw, 1.75rem)/1.5 Georgia, "Noto Serif TC", serif; }
+.story-chapter p { margin: 0; font-size: 1.08rem; line-height: 2; letter-spacing: .015em; }
+.story-signature { margin: 36px 0 8px; color: #8e7450; font: 400 1.45rem/1.7 Georgia, "Noto Serif TC", serif; text-align: center; }
+.story-text { max-width: 640px; margin: 32px auto 0; padding: 0 8px; text-align: center; font-size: 1.1rem; line-height: 1.9; }
+.story-text p { margin: 0 0 18px; }
+.story-photos { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 28px; }
+.story-photos img { display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; }
+.story-album { display: block; width: fit-content; min-height: 48px; margin: 30px auto 0; padding: 12px 22px; background: #24344c; color: #fff; text-align: center; text-decoration: none; font-weight: 600; }
+.gallery { columns: 2; column-gap: 10px; }
+.photo-tile { display: block; break-inside: avoid; margin: 0 0 10px; background: #e9e4dc; box-shadow: 0 4px 14px #24344c1a; }
+.photo-tile img { display: block; width: 100%; height: auto; }
+.source { margin: 28px 0 0; text-align: center; color: #536177; font-size: .9rem; }
+.source a { color: #24344c; text-underline-offset: 4px; }
+.viewer { width: 100vw; height: 100dvh; max-width: none; max-height: none; margin: 0; padding: 0; border: 0; background: #0b111b; color: #fff; }
+.viewer::backdrop { background: #0b111b; }
+.viewer-inner { height: 100%; display: grid; grid-template-rows: 58px minmax(0, 1fr) 64px; }
+.viewer-top { display: flex; align-items: center; justify-content: space-between; padding: 0 14px; }
+.viewer-image-wrap { min-height: 0; display: flex; align-items: center; justify-content: center; padding: 0 12px; }
+.viewer-image { display: block; max-width: 100%; max-height: 100%; object-fit: contain; }
+.viewer-controls { display: flex; align-items: center; justify-content: center; gap: 30px; }
+.viewer button { min-width: 52px; min-height: 48px; border: 1px solid #8895a5; background: transparent; color: #fff; font-size: 1.7rem; cursor: pointer; }
+.viewer .close { font-size: 1.25rem; }
+.viewer-counter { font-variant-numeric: tabular-nums; }
+@media (min-width: 720px) { .frame { padding: 32px 30px 78px; } .topbar { flex-wrap: nowrap; justify-content: space-between; } .site-links { display: flex; width: auto; order: 0; } .site-links a { min-width: 145px; min-height: 44px; } .gallery { columns: 3; column-gap: 16px; } .photo-tile { margin-bottom: 16px; } .story-photos { gap: 18px; } .story-photos img { aspect-ratio: 4 / 3; } }
