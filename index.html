@@ -6,6 +6,8 @@
   <meta name="theme-color" content="#f8f6f1">
   <meta name="description" content="Nancy 與 Kenneth 的婚禮時間及地點資訊。2026 年 11 月 28 日。">
   <title>Nancy 與 Kenneth｜婚禮資訊</title>
+  <link rel="alternate" hreflang="zh-Hant" href="index.html">
+  <link rel="alternate" hreflang="en" href="en.html">
   <link rel="preload" href="allison-regular.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2324344c'/%3E%3Cpath d='M32 11v42M21 25h22' stroke='%23d8b874' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
   <style>
@@ -15,6 +17,15 @@
     body { margin: 0; min-width: 300px; }
     .frame { min-height: 100vh; padding: 0 18px 52px; background: radial-gradient(circle at 92% 4%, #e9edf0 0, transparent 28%), #f8f7f3; }
     main { max-width: 920px; margin: 0 auto; }
+    .topbar { display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: center; gap: 7px 12px; padding: 12px 0; }
+    .site-links { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px; width: 100%; order: 2; }
+    .site-links a { display: flex; min-height: 52px; align-items: center; justify-content: center; padding: 6px; border: 1px solid #ac966f; color: #24344c; font-family: inherit; font-size: 1rem; font-weight: 600; line-height: 1.35; text-align: center; text-decoration: none; }
+    .site-links a[aria-current="page"] { background: #24344c; color: #fff; border-color: #24344c; }
+    .site-links a:hover, .site-links a:focus-visible { outline: 2px solid #ac966f; outline-offset: 2px; }
+    .language-nav { display: flex; justify-content: flex-end; align-items: center; gap: 4px; font-size: .95rem; }
+    .language-nav a { display: inline-flex; min-height: 44px; min-width: 72px; align-items: center; justify-content: center; padding: 0 14px; border: 1px solid #ac966f; color: #24344c; text-decoration: none; font-weight: 600; }
+    .language-nav a[aria-current="page"] { background: #24344c; color: #fff; border-color: #24344c; }
+    .language-nav a:hover, .language-nav a:focus-visible { outline: 2px solid #ac966f; outline-offset: 2px; }
     .hero { display: grid; overflow: hidden; background: #24344c; color: #fff; box-shadow: 0 18px 48px #1c2c4030; }
     .hero-photo { display: block; width: 100%; height: 270px; object-fit: cover; object-position: center 61%; }
     header { position: relative; text-align: center; padding: 44px 18px 42px; border-top: 8px solid transparent; border-image: linear-gradient(105deg, #099ccb, #23c4b7 30%, #e2b539 51%, #bd417b 74%, #4679c6) 1; }
@@ -26,6 +37,9 @@
     .amp { display: block; color: #d8b874; font-size: .55em; line-height: .85; margin: .15em 0; }
     .date { margin: 21px 0 0; font-size: 1rem; letter-spacing: .1em; }
     .date span { color: #d8b874; padding: 0 .5em; }
+    .countdown { display: inline-block; margin: 22px 0 0; padding: 9px 19px; border: 1px solid #d8b8748c; color: #f4e9d1; font-size: .95rem; letter-spacing: .09em; }
+    .countdown strong { color: #fff; font: 400 1.55rem Georgia, serif; padding: 0 .13em; vertical-align: -.06em; }
+    .countdown[hidden] { display: none; }
     h2 { margin: 0; font-size: 1.4rem; font-weight: 600; letter-spacing: .05em; }
     .section-label { margin: 40px 0 21px; text-align: center; color: #856b42; font-size: .88rem; letter-spacing: .21em; }
     .section-label::before, .section-label::after { content: ""; display: inline-block; vertical-align: middle; width: 23px; height: 1px; background: #cbb58d; margin: 0 13px; }
@@ -53,19 +67,26 @@
     .guide-place dt { margin: 15px 0 4px; color: #92734b; font-size: .89rem; font-weight: 700; letter-spacing: .08em; }
     .guide-place dd { margin: 0; line-height: 1.72; color: #48566a; }
     .guide-place a { color: #24344c; text-underline-offset: 3px; }
+    .transfer { margin-top: 18px; padding: 20px 22px; background: #fff; border: 1px solid #e5e0d5; border-left: 4px solid #b99a5f; }
+    .transfer h3 { margin: 0 0 8px; font-size: 1.08rem; }
+    .transfer p { margin: 0; color: #48566a; line-height: 1.72; }
+    .transfer a { display: inline-flex; align-items: center; min-height: 44px; margin-top: 10px; color: #24344c; font-weight: 600; text-underline-offset: 3px; }
+    .bus-update { margin: 18px 2px 0; color: #48566a; font-size: .9rem; line-height: 1.6; }
+    .bus-update a { color: #24344c; text-underline-offset: 3px; }
     .photos { margin-top: 36px; }
     .photos h2 { text-align: center; margin: 0 0 19px; font-family: "Wedding Script", "Segoe Script", cursive; font-weight: 400; color: #856b42; font-size: clamp(2.5rem, 10vw, 3.7rem); line-height: 1.2; letter-spacing: 0; }
     .photo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
     .photo-grid figure { position: relative; margin: 0; aspect-ratio: 3 / 4; overflow: hidden; background: #e8e3da; }
     .photo-grid img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 42%; }
     .photo-grid figure:nth-child(2) img { object-position: center 32%; }
-    .glass-ribbon { height: 68px; margin-top: 30px; background: url("church-glass.jpeg") center 44% / cover; border-top: 3px solid #24344c; border-bottom: 3px solid #24344c; }
-    .glass-finale { position: relative; display: grid; grid-template-columns: 1.1fr .8fr 1.1fr; height: 112px; margin-top: 30px; overflow: hidden; border: 4px solid #24344c; background: #24344c; gap: 4px; }
-    .glass-finale span { background-image: url("church-glass.jpeg"); background-size: 190% auto; filter: saturate(.92) contrast(1.04); }
-    .glass-finale span:nth-child(1) { background-position: 8% 44%; }
-    .glass-finale span:nth-child(2) { background-position: 50% 47%; }
-    .glass-finale span:nth-child(3) { background-position: 92% 44%; }
-    .glass-finale::after { content: "✝"; position: absolute; inset: 0; display: grid; place-items: center; color: #fff; font: 38px/1 Georgia, serif; text-shadow: 0 2px 10px #172235; }
+    .glass-feature { margin: 30px 0 0; padding: 7px; background: #24344c; box-shadow: 0 10px 25px #24344c22; }
+    .glass-feature img { display: block; width: 100%; height: 255px; object-fit: cover; object-position: 75% 57%; }
+    .glass-feature figcaption { padding: 11px 7px 4px; color: #f4e9d1; font-size: .82rem; line-height: 1.5; text-align: center; }
+    .glass-feature a { color: inherit; text-underline-offset: 3px; }
+    .glass-finale { margin: 30px 0 0; padding: 8px; background: #24344c; box-shadow: 0 12px 30px #24344c22; }
+    .glass-finale img { display: block; width: 100%; aspect-ratio: 1.75; object-fit: cover; object-position: center; }
+    .glass-finale figcaption { padding: 12px 7px 5px; color: #f4e9d1; font-size: .82rem; line-height: 1.5; text-align: center; }
+    .glass-finale a { color: inherit; text-underline-offset: 3px; }
     .booklet { position: relative; display: grid; gap: 22px; margin-top: 36px; padding: 28px; background: #24344c; color: #fff; border-left: 5px solid #18b9bd; }
     .booklet::before { content: ""; position: absolute; top: 0; left: -5px; width: 5px; height: 100%; background: linear-gradient(#18b9bd 0 34%, #e2b539 34% 66%, #bd417b 66%); }
     .booklet h2 { margin-top: 9px; }
@@ -76,6 +97,9 @@
     footer { text-align: center; margin-top: 25px; color: #856b42; font-size: .84rem; letter-spacing: .2em; }
     @media (min-width: 720px) {
       .frame { padding: 48px 30px 78px; }
+      .topbar { flex-wrap: nowrap; justify-content: space-between; }
+      .site-links { display: flex; width: auto; order: 0; }
+      .site-links a { min-width: 145px; min-height: 44px; }
       .hero { grid-template-columns: 46% 54%; min-height: 380px; }
       .hero-photo { height: 100%; min-height: 450px; object-position: center 36%; }
       header { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 40px 20px; }
@@ -86,8 +110,8 @@
       .guide { padding: 33px 34px 35px; }
       .guide-grid { grid-template-columns: 1fr 1fr; }
       .photos { margin-top: 48px; }
-      .glass-ribbon { height: 92px; }
-      .glass-finale { height: 148px; }
+      .glass-feature img { height: 350px; }
+      .glass-finale img { aspect-ratio: 2.1; }
       .booklet { padding: 32px 36px; }
       .photo-grid { gap: 20px; }
       .photo-grid figure { aspect-ratio: 4 / 3; }
@@ -95,20 +119,26 @@
       .photo-grid figure:nth-child(2) img { object-position: center 29%; }
     }
   </style>
+  <link rel="stylesheet" href="nav.css">
 </head>
 <body>
   <div class="frame">
     <main>
+      <div class="topbar"><nav class="site-links" aria-label="網站分頁"><a href="our-story.html">我們的故事</a><a href="pre-wedding.html">Pre Wedding 相片</a><a href="church.html">聖堂建築介紹</a></nav><nav class="language-nav" aria-label="選擇語言"><a href="index.html" lang="zh-Hant" aria-current="page">中文</a><a href="en.html" lang="en">English</a></nav></div>
       <div class="hero">
         <img class="hero-photo" src="hero-couple.jpeg" width="2048" height="1366" alt="Nancy 與 Kenneth 的婚紗照">
         <header>
           <p class="eyebrow">婚禮當日資訊</p>
           <h1 aria-label="Nancy &amp; Kenneth"><span class="name">Nancy</span><span class="amp" aria-hidden="true">&amp;</span><span class="name">Kenneth</span></h1>
           <p class="date">2026 年 11 月 28 日 <span aria-hidden="true">·</span> 星期六</p>
+          <p class="countdown" data-countdown hidden></p>
         </header>
       </div>
 
-      <div class="glass-ribbon" aria-hidden="true"></div>
+      <figure class="glass-feature">
+        <img src="church-glass-feature.jpg" width="1920" height="1080" alt="聖本篤堂側面彩繪玻璃窗與聖堂內部">
+        <figcaption>聖本篤堂彩繪玻璃 · 照片來源：<a href="https://heritage.catholic.org.hk/en/catholic_building/st_benedict_church/photo/index-id-39.html" target="_blank" rel="noopener noreferrer">天主教香港教區－歷史建築探索</a></figcaption>
+      </figure>
       <p class="section-label">當日時間及地點</p>
 
       <div class="events">
@@ -142,6 +172,8 @@
             <dl>
               <dt>港鐵</dt>
               <dd>乘屯馬綫至沙田圍站，由 C 出口步行往崗背街 7 號。</dd>
+              <dt>巴士</dt>
+              <dd>可乘九巴 86A 或 89B 至「沙田圍巴士總站」，聖堂就在總站對面。</dd>
               <dt>到場</dt>
               <dd>下午 1:30 起恭候光臨；抵達聖堂後請按現場指示入座。</dd>
               <dt>泊車</dt>
@@ -153,6 +185,8 @@
             <dl>
               <dt>港鐵</dt>
               <dd>由沙田圍站 C 出口步行至酒店約 5 分鐘。</dd>
+              <dt>巴士</dt>
+              <dd>可乘 284、89X、86K、49X、81C、182 或 A41，在大涌橋路「麗豪酒店」站下車。不同方向的車站分設道路兩旁，請按所乘路線確認下車位置。</dd>
               <dt>到場</dt>
               <dd>抵達酒店後按指示前往 3 樓紫荊廳；下午 6:00 起恭候光臨。</dd>
               <dt>泊車</dt>
@@ -160,6 +194,12 @@
             </dl>
           </div>
         </div>
+        <div class="transfer">
+          <h3>由聖堂前往酒店</h3>
+          <p>如需由聖堂前往酒店，可按步行地圖導航；酒店於下午 6:00 起恭候賓客。</p>
+          <a href="https://www.google.com/maps/dir/?api=1&amp;origin=Church%20of%20St%20Benedict%207%20Kong%20Pui%20Street%20Sha%20Tin&amp;destination=Regal%20Riverside%20Hotel%2034-36%20Tai%20Chung%20Kiu%20Road%20Sha%20Tin&amp;travelmode=walking" target="_blank" rel="noopener noreferrer" aria-label="查看由聖本篤堂至沙田麗豪酒店的步行路線，於新分頁開啟">查看步行路線 ↗</a>
+        </div>
+        <p class="bus-update">巴士班次及停站或有調整；出發前請於<a href="https://www.hkemobility.gov.hk/" target="_blank" rel="noopener noreferrer">香港出行易</a>查詢最新路線。</p>
       </section>
 
       <section class="booklet" aria-labelledby="booklet-title">
@@ -180,9 +220,31 @@
         </div>
       </section>
 
-      <div class="glass-finale" aria-label="聖本篤堂彩繪玻璃裝飾" role="img"><span></span><span></span><span></span></div>
+      <figure class="glass-finale">
+        <img src="church-glass-official.jpg" width="1370" height="865" loading="lazy" alt="聖本篤堂內部，右側可見藍、黃、紅色彩繪玻璃窗">
+        <figcaption>聖本篤堂彩繪玻璃 · 照片來源：<a href="https://heritage.catholic.org.hk/en/catholic_building/st_benedict_church/photo/index-id-39.html" target="_blank" rel="noopener noreferrer">天主教香港教區－歷史建築探索</a></figcaption>
+      </figure>
       <footer>誠邀蒞臨 · 分享喜悅</footer>
     </main>
   </div>
+  <script>
+    (() => {
+      const counter = document.querySelector('[data-countdown]');
+      function updateCountdown() {
+        const parts = Object.fromEntries(new Intl.DateTimeFormat('en-US', { timeZone: 'Asia/Hong_Kong', year: 'numeric', month: 'numeric', day: 'numeric' }).formatToParts(new Date()).filter(part => part.type !== 'literal').map(part => [part.type, Number(part.value)]));
+        const days = Math.round((Date.UTC(2026, 10, 28) - Date.UTC(parts.year, parts.month - 1, parts.day)) / 86400000);
+        if (days < 0) { counter.hidden = true; return; }
+        counter.replaceChildren();
+        if (days === 0) {
+          counter.textContent = '今天是我們的婚禮日';
+        } else {
+          counter.append('距離婚禮還有 ', Object.assign(document.createElement('strong'), { textContent: String(days) }), ' 天');
+        }
+        counter.hidden = false;
+      }
+      updateCountdown();
+      setInterval(updateCountdown, 60000);
+    })();
+  </script>
 </body>
 </html>
